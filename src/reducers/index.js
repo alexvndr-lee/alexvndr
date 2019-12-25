@@ -5,8 +5,6 @@ import deleteAll from "./deleteAllReducer";
 
 const rootReducer = combineReducers({
     table,
-    deleteOne,
-    deleteAll
 });
 
 export default rootReducer;

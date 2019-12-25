@@ -20,7 +20,7 @@ const TableComponent = ({ columns, data, onClick }) => {
                 </TableRow>
             </TableHead>
             <TableBody>
-                {data && data.map(d => (
+                {data.map(d => (
                     <TableRow>
                         <TableCell>{d.title}</TableCell>
                         <TableCell>

@@ -1,6 +1,6 @@
-const state = [];
+const InitialState = [];
 
-const deleteAll = (InitialState = state, action) => {
+const deleteAll = (state = InitialState, action) => {
     switch(action.type){
         case "DELETE_ALL":
             return ({
@@ -8,7 +8,7 @@ const deleteAll = (InitialState = state, action) => {
                 data: action.payload
             })
         default:
-            return InitialState;
+            return state;
     }
 }
 
