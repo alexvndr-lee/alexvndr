@@ -9,7 +9,6 @@ import Button from "@material-ui/core/Button";
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 
 const TableComponent = ({ columns, data, onClick }) => {
-    
     return (
         <Table style={{width: "80%", border: "1px solid black"}}>
             <TableHead>
@@ -20,11 +19,11 @@ const TableComponent = ({ columns, data, onClick }) => {
                 </TableRow>
             </TableHead>
             <TableBody>
-                {data.map(d => (
-                    <TableRow>
+                {data.map((d, index) => (
+                    <TableRow key={index}>
                         <TableCell>{d.title}</TableCell>
                         <TableCell>
-                            <img src={d.avatar} width="60px"></img>
+                            <img alt="avatar" src={d.avatar} width="60px"></img>
                         </TableCell>
                         <TableCell>{d.text}</TableCell>
                         <TableCell>{moment(d.createdAt).subtract(10, "days").format("DD/MM/YYYY")}</TableCell>

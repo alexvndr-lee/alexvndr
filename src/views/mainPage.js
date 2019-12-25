@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import { showTable } from "../actions/show-table";
 import TableComponent from "../components/TableComponent";
 import { withRouter } from "react-router-dom";
-import { deleteOne } from "../actions/deleteOneRow";
-import { deleteAll } from "../actions/deleteAllRows";
+import { deleteOne } from "../actions/show-table";
+import { deleteAll } from "../actions/show-table";
 import Button from "@material-ui/core/Button";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
