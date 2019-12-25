@@ -1,19 +1,13 @@
-const InitialState = [];
+const initialState = [];
 
-const table = (state = InitialState, action) => {
+const table = (state = initialState, action) => {
     switch (action.type) {
         case "SHOW_TABLE":
             return action.payload;
         case "DELETE_ONE":
-            return ({
-                ...state,
-                data: action.payload,
-            })
+            return action.payload;
         case "DELETE_ALL":
-            return ({
-                ...state, 
-                data: action.payload
-            })
+            return action.payload;
         default:
             return state;
     }

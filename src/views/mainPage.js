@@ -46,6 +46,7 @@ class MainPage extends React.Component {
             <div>
                 <div className="tableSection" style={{width: "100%", display: "flex", flexFlow: "column", justifyContent: "center", alignItems: "center"}}>
                     <Button className="deleteAllButton" onClick={this.handleDeleteAll} style={{width: "60px", margin: "30px 0"}}><DeleteForeverIcon/></Button>
+                    <Button style={{backgroundColor: "green", marginBottom: "15px", color: "#fff"}} onClick={() => this.props.showTable()}>Show All</Button>
                     <TableComponent columns={columns} data={this.props.data} onClick={this.handleDeleteOne}></TableComponent>
                 </div>
             </div>

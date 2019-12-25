@@ -22,7 +22,7 @@ export const deleteOne = id => {
         ))
         dispatch({
             type: "DELETE_ONE",
-            payload: console.log(getState())
+            payload: newData
         })
     }
 }
@@ -31,7 +31,7 @@ export const deleteAll = () => {
     return dispatch => {
         dispatch({
             type: "DELETE_ALL",
-            payload: null
+            payload: []
         })
     }
 }
